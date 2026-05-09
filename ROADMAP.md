@@ -66,7 +66,7 @@ Android sensor
 
 | Phase | Name | Status |
 |-------|------|--------|
-| 0 | Project Setup | ⬜ Not started |
+| 0 | Project Setup | ✅ Complete |
 | 1 | Android Step Plugin Integration | ⬜ Not started |
 | 2 | StepManager Autoload | ⬜ Not started |
 | 3 | StepCurrency System | ⬜ Not started |
@@ -85,12 +85,12 @@ Status values: ⬜ Not started · 🔄 In progress · ✅ Complete
 **Goal**: Create the Godot 4 project and folder skeleton. Nothing platform-specific yet.
 
 **Tasks**:
-- [ ] Create `Godot_2D/` Godot 4 project (project.godot, default settings)
-- [ ] Set project to portrait mode (mobile default), target Android
-- [ ] Create folder structure: `addons/step_engine/core/`, `addons/step_engine/ui/`, `addons/step_engine/android/`, `demo/`
-- [ ] Create empty `plugin.cfg` and `plugin.gd` for the addon
-- [ ] Add Android export preset (no custom template yet — that comes in Phase 1)
-- [ ] Commit: `phase-0: project skeleton`
+- [x] Create `Godot_2D/` Godot 4 project (project.godot, default settings)
+- [x] Set project to portrait mode (mobile default), target Android
+- [x] Create folder structure: `addons/step_engine/core/`, `addons/step_engine/ui/`, `addons/step_engine/android/`, `demo/`
+- [x] Create empty `plugin.cfg` and `plugin.gd` for the addon
+- [ ] Add Android export preset — configure in Godot editor (Project → Export → Add Android) after Phase 1 Android build tools are set up
+- [x] Commit: `phase-0: project skeleton`
 
 **Acceptance**: Project opens in Godot editor without errors. Folder structure matches the architecture diagram above.
 
@@ -312,9 +312,8 @@ This phase is a stretch goal — only pursue if Android support is solid and the
 
 ## Godot Project Root
 
-> To be updated once the project is created in Phase 0.
-
 `Godot_2D/` — relative to repo root.
+Full path: `D:\Claude_code\step game engine\Godot_2D\project.godot`
 
 ---
 

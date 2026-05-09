@@ -2,7 +2,7 @@
 .godot/
 *.translation
 export_presets.cfg
-android/
+Godot_2D/android/
 *.apk
 *.aab
 *.ipa
@@ -13,3 +13,6 @@ android/
 # OS generated
 .DS_Store
 Thumbs.db
+
+# Claude Code local settings
+.claude/settings.local.json

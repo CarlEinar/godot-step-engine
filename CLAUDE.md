@@ -60,11 +60,24 @@ When working on this project, agents should specialize by task type:
 
 ### Project Structure
 
+```
+Godot_2D/
+├── project.godot
+├── icon.svg
+├── addons/
+│   └── step_engine/
+│       ├── plugin.cfg
+│       ├── plugin.gd
+│       ├── core/          # StepManager.gd, StepCurrency.gd, StepSaveData.gd (Phase 2-4)
+│       ├── ui/            # StepDisplay, CurrencyDisplay, SpendButton (Phase 5)
+│       └── android/       # Compiled .aar plugin (Phase 1) — .gdignore prevents Godot import
+└── demo/                  # Demo scene (Phase 6)
+```
 
 ### Environment
 
 - **Godot executable**: `D:\Godot\Godot_v4.6.2-stable_win64.exe\Godot_v4.6.2-stable_win64.exe`
-- **Godot project root**: to be added here
+- **Godot project root**: `D:\Claude_code\step game engine\Godot_2D`
 - **Shell note**: Always invoke Godot from **bash** (not `cmd /c`) so stdout is captured correctly.
 
 ### Common Development Commands
