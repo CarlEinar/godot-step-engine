@@ -67,7 +67,7 @@ Android sensor
 | Phase | Name | Status |
 |-------|------|--------|
 | 0 | Project Setup | ✅ Complete |
-| 1 | Android Step Plugin Integration | ⬜ Not started |
+| 1 | Android Step Plugin Integration | 🔄 In progress — code complete, needs build + device test |
 | 2 | StepManager Autoload | ⬜ Not started |
 | 3 | StepCurrency System | ⬜ Not started |
 | 4 | Data Persistence | ⬜ Not started |
@@ -103,12 +103,17 @@ Status values: ⬜ Not started · 🔄 In progress · ✅ Complete
 **Background**: Godot 4 does not expose Android's `TYPE_STEP_COUNTER` sensor natively. We will adapt the open-source **Godot-Android-Step-Counter-Plugin** (by Dasonic) which wraps this sensor as a Godot 4 Android Plugin v2.
 
 **Tasks**:
-- [ ] Evaluate the Dasonic plugin source: does it cover our needs or do we need to fork/extend it?
-- [ ] Integrate (or fork) the plugin into `addons/step_engine/android/`
-- [ ] Add required Android permission to the export template: `android.permission.ACTIVITY_RECOGNITION`
-- [ ] Write a minimal test scene that calls the plugin and prints step count to the output log
-- [ ] Verify on a physical Android device (emulators do not have step sensors)
-- [ ] Commit: `phase-1: android step counter plugin integrated`
+- [x] Evaluated Dasonic plugin — wrote our own Kotlin plugin (same sensor API, cleaner signals, no Google Fit dependency)
+- [x] Plugin Kotlin source in `addons/step_engine/android/plugin/src/`
+- [x] Plugin discovery via AndroidManifest meta-data (`org.godotengine.plugin.v2.StepCounterPlugin`)
+- [x] `ACTIVITY_RECOGNITION` permission declared in plugin AndroidManifest.xml
+- [x] `export_plugin.gd` registers the `.aar` with Godot's Android exporter
+- [x] Test scene `demo/TestSteps.tscn` + `TestSteps.gd` written
+- [ ] **USER ACTION**: Build the `.aar` — see `addons/step_engine/android/BUILD_INSTRUCTIONS.md`
+- [ ] **USER ACTION**: Copy `.aar` to `addons/step_engine/bin/debug/` and `bin/release/`
+- [ ] **USER ACTION**: Enable "Use Custom Build" in Android export preset
+- [ ] Verify on a physical Android device
+- [x] Commit: `phase-1: android step counter plugin`
 
 **Acceptance**: Running on a real Android device, the output log shows a live step count that increments when the device is walked with.
 

@@ -1,11 +1,15 @@
 @tool
 extends EditorPlugin
 
+var _export_plugin: EditorExportPlugin
+
 
 func _enable_plugin() -> void:
-	# Autoloads registered here in Phase 2 & 3
-	pass
+	_export_plugin = preload("res://addons/step_engine/export_plugin.gd").new()
+	add_export_plugin(_export_plugin)
+	# StepManager and StepCurrency autoloads added in Phase 2
 
 
 func _disable_plugin() -> void:
-	pass
+	remove_export_plugin(_export_plugin)
+	_export_plugin = null

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Required for TYPE_STEP_COUNTER sensor on Android 10+ (API 29+) -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+
+    <application>
+        <!--
+            Godot 4 plugin v2 discovery: this meta-data entry tells Godot's export system
+            which class implements the plugin. The name must be:
+            org.godotengine.plugin.v2.<PluginName>
+        -->
+        <meta-data
+            android:name="org.godotengine.plugin.v2.StepCounterPlugin"
+            android:value="com.carleinarhellenes.stepengine.StepCounterPlugin" />
+    </application>
+
+</manifest>
