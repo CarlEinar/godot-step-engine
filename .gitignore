@@ -1,0 +1,15 @@
+# Godot 4 .gitignore
+.godot/
+*.translation
+export_presets.cfg
+android/
+*.apk
+*.aab
+*.ipa
+
+# Import files
+*.import
+
+# OS generated
+.DS_Store
+Thumbs.db
