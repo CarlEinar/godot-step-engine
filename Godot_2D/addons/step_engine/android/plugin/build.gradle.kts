@@ -25,11 +25,6 @@ android {
     }
 }
 
-repositories {
-    google()
-    mavenCentral()
-}
-
 dependencies {
     // compileOnly: Godot provides the runtime; this is just for compilation.
     // Update to match your Godot version if needed.

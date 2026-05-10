@@ -17,7 +17,7 @@ func _get_android_libraries(platform: EditorExportPlatform, debug: bool) -> Pack
 		return PackedStringArray([path])
 	push_warning(
 		"StepEngine: AAR not found at res://%s. " % path +
-		"Build the plugin first — see addons/step_engine/android/BUILD_INSTRUCTIONS.md"
+		"See addons/step_engine/android/BUILD_INSTRUCTIONS.md"
 	)
 	return PackedStringArray()
 
